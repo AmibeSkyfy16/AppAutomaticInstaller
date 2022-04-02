@@ -1,0 +1,51 @@
+[
+  {
+    "IntellijIdeaUltimate": {
+      "selected": "true",
+      "path": "E:\\Documents\\Resources\\Softwares\\JetBrains\\IntelliJ IDEA\\ideaIU-2019.2.3.win.zip",
+      "destinationPath": "C:\\temp\\temp1"
+    }
+  },
+  {
+    "IntellijIdeaCommunity": {
+      "selected": "false",
+      "path": "E:\\Documents\\Resources\\Softwares\\JetBrains\\IntelliJ IDEA\\ideaIC-2019.2.3.win.zip",
+      "destinationPath": "C:\\Program Files\\Jetbrains\\IntelliIdea Community"
+    }
+  },
+  {
+    "Bellsoft jdk 8u222": {
+      "selected": "false",
+      "path": "E:\\Documents\\Resources\\Programming\\Java\\Liberica\\bellsoft-jdk8u222-windows-amd64.zip",
+      "destinationPath": "C:\\Program Files\\Bellsoft"
+    }
+  },
+  {
+    "Bellsoft jdk 11.0.1": {
+      "selected": "false",
+      "path": "E:\\Documents\\Resources\\Programming\\Java\\Liberica\\bellsoft-jdk11.0.1-windows-amd64.zip",
+      "destinationPath": "C:\\Program Files\\Bellsoft"
+    }
+  },
+  {
+    "Bellsoft jdk 12.0.2": {
+      "selected": "false",
+      "path": "E:\\Documents\\Resources\\Programming\\Java\\Liberica\\bellsoft-jdk12.0.2-windows-amd64.zip",
+      "destinationPath": "C:\\Program Files\\Bellsoft"
+    }
+  },
+  {
+    "Bellsoft jdk 13": {
+      "selected": "false",
+      "path": "E:\\Documents\\Resources\\Programming\\Java\\Liberica\\bellsoft-jdk13-windows-amd64.zip",
+      "destinationPath": "C:\\Program Files\\Bellsoft"
+    }
+  },
+  {
+    "Bellsoft jdk 13": {
+      "selected": "false",
+      "path": "E:\\Documents\\Resources\\Softwares\\Gradle\\gradle-5.6.2-all.zip",
+      "destinationPath": "C:\\Program Files\\Gradle"
+    }
+  }
+]

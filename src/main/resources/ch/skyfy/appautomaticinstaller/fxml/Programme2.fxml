@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="root_StackPane" maxHeight="80.0" maxWidth="1.7976931348623157E308" minHeight="80.0" minWidth="400.0" prefHeight="80.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox fx:id="container_VBox" alignment="CENTER">
+         <children>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="50.0" prefWidth="150.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="NEVER" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="NEVER" />
+                  <ColumnConstraints hgrow="NEVER" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="NEVER" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <CheckBox fx:id="appName_CheckBox" mnemonicParsing="false" text="Minecraft">
+                     <GridPane.margin>
+                        <Insets left="5.0" right="15.0" />
+                     </GridPane.margin>
+                  </CheckBox>
+                  <Label text="Chemin du fichier zip" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets left="15.0" right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="zipFilePath_TextField" GridPane.columnIndex="3">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial" size="11.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Chemin de destination" GridPane.columnIndex="5">
+                     <GridPane.margin>
+                        <Insets left="15.0" right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="destinationFolderPath_TextField" GridPane.columnIndex="6">
+                     <font>
+                        <Font name="Arial" size="11.0" />
+                     </font></TextField>
+                  <Button fx:id="zipFilePath_Button" mnemonicParsing="false" text="..." GridPane.columnIndex="4">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="destinationFolderPath_Button" mnemonicParsing="false" prefHeight="17.0" prefWidth="19.0" text="..." GridPane.columnIndex="7">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <ImageView fx:id="status_ImageView" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                     <image>
+                        <Image url="@../images/validedIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <GridPane fx:id="status_GridPane">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="20.0" />
+                <ColumnConstraints hgrow="NEVER" minWidth="50.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ProgressBar fx:id="status_ProgressBar" maxWidth="1.7976931348623157E308" progress="0.0">
+                     <GridPane.margin>
+                        <Insets left="5.0" right="15.0" />
+                     </GridPane.margin>
+                  </ProgressBar>
+                  <Label fx:id="status_Label" text="98 %" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

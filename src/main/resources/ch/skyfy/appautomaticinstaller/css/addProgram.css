@@ -1,0 +1,36 @@
+.label, .check-box{
+    -fx-text-fill: #f6f6f6;
+}
+
+.check-box .box{
+    -fx-background-color: #909090;
+    -fx-background-insets: 0;
+    /*-fx-background-radius: 2px, 2px, 2px, 2px;*/
+    -fx-background-radius: 0px;
+}
+
+.check-box:selected .box .mark,
+.check-box:indeterminate .box .mark{
+    -fx-background-color: white;
+}
+
+.check-box:focused .box{
+    -fx-border-color: #1089ff;
+    -fx-border-width: 2px;
+    -fx-border-radius: 2px;
+    -fx-border-insets: -2px ;
+}
+
+
+.button{
+    -fx-background-color: #909090;
+    -fx-background-insets: 0;
+}
+
+.button:hover{
+    -fx-background-color: #3c70a4;
+}
+
+.button:armed{
+    -fx-background-color: #1089ff;
+}

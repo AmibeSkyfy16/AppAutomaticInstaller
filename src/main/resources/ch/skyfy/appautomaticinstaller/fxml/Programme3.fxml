@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox fx:id="root_Vbox" maxHeight="180.0" maxWidth="1.7976931348623157E308" minHeight="180.0" prefHeight="180.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="300.0" prefWidth="300.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="NEVER" />
+         </rowConstraints>
+         <children>
+            <CheckBox fx:id="appName_CheckBox" mnemonicParsing="false" text="Minecraft">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <ImageView fx:id="delete_ImageView" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+               <image>
+                  <Image url="@../images/delete.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Chemin du fichier zip" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="zipFile_TextField" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <font>
+                  <Font name="Arial" size="11.0" />
+               </font>
+            </TextField>
+            <ImageView fx:id="zipFileStatus_ImageView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/appNotInstalled.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="zipFile_Button" mnemonicParsing="false" prefHeight="17.0" prefWidth="19.0" text="..." GridPane.columnIndex="3" />
+         </children>
+      </GridPane>
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Chemin de destination" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="destinationFolder_TextField" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Arial" size="11.0" />
+               </font>
+            </TextField>
+            <Button fx:id="destinationFolder_Button" mnemonicParsing="false" prefHeight="17.0" prefWidth="19.0" text="..." GridPane.columnIndex="3">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
+            <ImageView fx:id="destinationFolderStatus_ImageView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/fileNotExist.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <GridPane fx:id="status_GridPane">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="20.0" />
+            <ColumnConstraints hgrow="NEVER" minWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ProgressBar fx:id="status_ProgressBar" maxWidth="1.7976931348623157E308" progress="0.0">
+               <GridPane.margin>
+                  <Insets left="5.0" right="15.0" />
+               </GridPane.margin>
+            </ProgressBar>
+            <Label fx:id="status_Label" text="98 %" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</VBox>

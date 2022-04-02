@@ -1,0 +1,65 @@
+plugins {
+    id 'java'
+    id 'groovy'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.12'
+}
+
+group 'ch.skyfy'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://jitpack.io/'
+    }
+    flatDir {
+        dirs 'lib'
+    }
+}
+
+dependencies {
+    implementation 'commons-io:commons-io:2.11.0'
+    implementation group: 'net.lingala.zip4j', name: 'zip4j', version: '2.10.0'
+
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClassName = 'ch.skyfy.appautomaticinstaller.AppAutomaticInstallerLauncher'
+}
+
+javafx {
+    version = "17.0.2"
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.graphics']
+}
+
+//task fatJar(type: Jar) {
+//
+//    manifest {
+//        attributes 'Main-Class': "ch.skyfy.appautomaticinstaller.AppAutomaticInstaller"
+//    }
+//    archivesBaseName = "${rootProject.name}"
+//    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+//    with jar
+//}
+
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'ch.skyfy.appautomaticinstaller.AppAutomaticInstallerLauncher'
+    }
+    archivesBaseName = "${rootProject.name}"
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+//    duplicatesStrategy = DuplicatesStrategy.INCLUDE // i dont know what's this
+}

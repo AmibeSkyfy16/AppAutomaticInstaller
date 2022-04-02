@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox alignment="CENTER_LEFT" maxHeight="50.0" minHeight="50.0" minWidth="800.0" prefHeight="50.0" prefWidth="800.0" spacing="10.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <CheckBox fx:id="selected_CheckBox" mnemonicParsing="false">
+         <HBox.margin>
+            <Insets left="5.0" />
+         </HBox.margin>
+      </CheckBox>
+      <Label fx:id="programName_Label" text="IntellijIdeaUltimate" />
+      <Label text="Chemin du fichier zip">
+         <HBox.margin>
+            <Insets left="20.0" />
+         </HBox.margin>
+      </Label>
+      <TextField fx:id="path_TextField" maxWidth="1.7976931348623157E308" minWidth="120.0" prefWidth="180.0" HBox.hgrow="ALWAYS" />
+      <Label text="Chemin de destination" />
+      <TextField fx:id="destinationPath_TextField" maxWidth="1.7976931348623157E308" minWidth="120.0" prefWidth="180.0" HBox.hgrow="ALWAYS">
+         <HBox.margin>
+            <Insets right="5.0" />
+         </HBox.margin>
+      </TextField>
+   </children>
+</HBox>
